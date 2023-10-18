@@ -3,7 +3,7 @@
 
  Authors: Jialiang Sun, Wen Yao, Tingsong Jiang, Chao Li, Xiaoqian Chen
 
-<img src = 'https://github.com/Jialiang14/AAAD/blob/gh-pages/figures/AAAD.png?raw=true'/>
+<img src = 'https://github.com/Jialiang14/AAAD/tree/main/figures/AAAD.png?raw=true'/>
 
 ## Abstract
  Due to the urgent need of the robustness of deep neural networks (DNN),
