@@ -16,7 +16,7 @@ arxiv: https://arxiv.org/abs/2102.11860v1
 
 <img src = 'https://github.com/Jialiang14/AAAD/blob/main/figures/short.png?raw=true'/>
 
-<img src = 'https://github.com/Jialiang14/AAAD/blob/main/figures/aaad.png?raw=true'/>
+<img src = 'https://github.com/Jialiang14/AAAD/blob/main/figures/AAAD_revision4.png?raw=true'/>
 
 ## The introduction of the core modules of A3D:
 ```
