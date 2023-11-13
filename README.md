@@ -28,6 +28,30 @@ retrain: retrain the searched architectures
 eval_robustness:evaluate the model robustness
 ```
 
+### Usage
+a. Search for efficient attacks.
+
+```shell
+cd AAAD/AAA/optimizer_attack/DE
+python3 
+```
+
+b. Install PyTorch and torchvision following the [official instructions](https://pytorch.org/), e.g.,
+
+```shell
+conda install pytorch==1.2.0 torchvision==0.4.0 cudatoolkit==10.0
+```
+
+c. Install other python package for DADA and fast-autoaugment, e.g.,
+
+```shell
+# for training and inference
+pip install -r fast-autoaugment/requirements.txt
+
+# for searching
+pip install -r requirements.txt
+```
+
 
 
 Our implementations are based on following papers:
