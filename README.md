@@ -14,7 +14,6 @@ arxiv: https://arxiv.org/abs/2203.03128
 
 ## Framework
 
-<img src = 'https://github.com/Jialiang14/AAAD/blob/main/figures/short.png?raw=true'/>
 
 <img src = 'https://github.com/Jialiang14/AAAD/blob/main/figures/AAAD_revisionv4.png?raw=true'/>
 
