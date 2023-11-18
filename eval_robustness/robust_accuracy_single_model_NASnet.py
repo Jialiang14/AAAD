@@ -540,8 +540,8 @@ if __name__ == '__main__':
 
         elif args.arch == 'DE_NAS_AAA':
             save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/PGD_advtrain/trained_model_cifar10/DE_AAA_5-20231015-151353',
-                'weights.pt')
+                '/mnt/jfs/sunjialiang/AAAD/retrain/PGD_advtrain/trained_model_cifar10/DE_AAA-20231017-023909',
+                'DE_NAS_AAA_weights.pt')
 
         model.cuda()
         model.load_state_dict(torch.load(save_model_path))
