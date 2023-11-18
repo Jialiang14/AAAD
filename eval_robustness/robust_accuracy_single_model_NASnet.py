@@ -281,7 +281,7 @@ if __name__ == '__main__':
     # model_list = ['Random_search_System', 'Random_search_FGSM','NASNet_Random','DARTS_FGSM','PCDARTS_FGSM','FairDARTS_FGSM','NASP_FGSM','SmoothDARTS_FGSM']
     # model_list = ['Random_search_PGD','DARTS_system', 'PCDARTS_System', 'FairDARTS_System', 'NASP_System', 'SmoothDARTS_System']
     # model_list = ['DE_System', 'Random_search_weight_sharing_System','DE_FGSM', 'Random_search_weight_sharing_FGSM','DE_natural', 'Random_search_weight_sharing_natural']
-    model_list = ['DE_AAA_5']
+    model_list = ['DE_NAS_AAA']
     for i in model_list:
         args.arch = i
         print(args.arch)
@@ -504,10 +504,6 @@ if __name__ == '__main__':
             model.cuda()
             model.load_state_dict(torch.load(save_model_path))
 
-        elif args.arch == 'ES_CRA_ME':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/PGD_advtrain/open_courced_models/ES_CRA_ME-20230226-093222',
-                'weights.pt')
 
         elif args.arch == 'PDARTS':
             save_model_path = os.path.join(
@@ -519,74 +515,6 @@ if __name__ == '__main__':
             model.cuda()
             model.load_state_dict(torch.load(save_model_path))
 
-        elif args.arch == 'ES_CRA_ME_3':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model/ES_CRA_ME_3-20230322-003937',
-                'weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'ES_CRA_ME_100':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model_100/ES_CRA_ME_100-20230328-131935',
-                'weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'RACL':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model/RACL-20230321-150830','weights.pt')
-            # save_model_path = os.path.join(
-            #     '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model_100/RACL-20230327-125127','weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'RNAS_H':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model/RNAS_H-20230326-011256','weights.pt')
-            # save_model_path = os.path.join(
-            #     '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model_100/RNAS_H-20230326-133655', 'weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'ES_CRA_ME_8':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model/ES_CRA_ME_8-20230325-073753','weights.pt')
-            # save_model_path = os.path.join(
-            #     '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model_100/ES_CRA_ME_8-20230327-065011','weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'ES_CRA_ME_9':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model/ES_CRA_ME_9-20230326-020835','weights.pt')
-            # save_model_path = os.path.join(
-            #     '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model_100/ES_CRA_ME_9-20230326-133456',
-            #     'weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'JiaNet':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model/JiaNet-20230326-215056','weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'Robust':
-            genotype = eval("genotypes.%s" % 'DARTS_V1')
-            from optimizer_adv.nas_robustness.darts.model_ensemble import DARTSEnsembleAverage as Network
-            model = Network(args.init_channels, CIFAR_CLASSES, args.layers, args.auxiliary, genotype)
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model/Robust-20230409-124839', 'weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
-
-        elif args.arch == 'ES_CRA_ME_10':
-            save_model_path = os.path.join(
-                '/mnt/jfs/sunjialiang/AAAD/retrain/standard_train/trained_model_100/ES_CRA_ME_10-20230330-064215',
-                'weights.pt')
-            model.cuda()
-            model.load_state_dict(torch.load(save_model_path))
 
         elif args.arch == 'SmoothDARTS_FGSM':
             # save_model_path = os.path.join(
@@ -610,7 +538,7 @@ if __name__ == '__main__':
             model.cuda()
             model.load_state_dict(torch.load(save_model_path))
 
-        elif args.arch == 'DE_AAA_5':
+        elif args.arch == 'DE_NAS_AAA':
             save_model_path = os.path.join(
                 '/mnt/jfs/sunjialiang/AAAD/retrain/PGD_advtrain/trained_model_cifar10/DE_AAA_5-20231015-151353',
                 'weights.pt')

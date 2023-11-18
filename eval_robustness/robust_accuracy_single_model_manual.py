@@ -302,13 +302,13 @@ if __name__ == '__main__':
     import AAA.model.models.RobNets.utils
 
     # use RobNet architecture
-    model = models.robnet(architecture_code.robnet_AAA_2)
+    model = models.robnet(architecture_code.robnet_AAA)
     # load pre-trained model
     # utils.load_state('/mnt/jfs/sunjialiang/AAAD/AAA/model/model_weights/checkpoint/RobNet_free_cifar10.pth.tar', model)
     # load self-trained model
     # model.load_state_dict(torch.load('/mnt/jfs/sunjialiang/AAAD/retrain/PGD_advtrain/trained_model_cifar10/RobNet_selfat-20231005-051704/weights.pt'))
     #load robnet_AAA
-    model.load_state_dict(torch.load('/mnt/jfs/sunjialiang/AAAD/retrain/PGD_advtrain/trained_model_cifar10/RobNet_AAA_2-20231013-153453/weights.pt'))
+    model.load_state_dict(torch.load('/mnt/jfs/sunjialiang/AAAD/retrain/PGD_advtrain/trained_model_cifar10/RobNet_AAA-20231016-142421/RobNet_AAA_weights.pt'))
     model = model.cuda().eval()
     logging.info('Evaluate Arch: %s: Params = %f', args.arch, utils.count_parameters_in_MB(model))
 
