@@ -1,5 +1,5 @@
 # AAAD
- The source code of auto-adversarial attack and defense
+ The source code of auto-adversarial attack and defense （**The project will continue to be refined in future work**）
 
  Authors: Jialiang Sun, Wen Yao, Tingsong Jiang, Chao Li, Xiaoqian Chen
 
